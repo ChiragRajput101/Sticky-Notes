@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px 0 15px;
+}
+
+.note {
+  background-color: #fef68a;
+  border: 1px solid black;
+  border-radius: 2ch;
+  padding: 2ch;
+  /* margin: 1ch; */
+  min-height: 180px;
+  /* width: 400px; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notesList {
+  display: grid;
+  grid-gap: 1rem;
+  /* no of nodes -- auto fit using the given width */
+
+  /* minmax ensures that if the width of window becomes less than 350px then it maintaines the width of 1 fullrow for every single node */
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr)); 
+}
